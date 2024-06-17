@@ -1,0 +1,263 @@
+// Base variables
+$primary-color: #2ecc71;
+$secondary-color: #3498db;
+$background-color: #f0f0f0;
+$text-color: #333;
+$border-color: #ddd;
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+}
+
+.nav__logo-link {
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.nav__menu {
+    display: flex;
+}
+
+.nav__list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 20px;
+}
+
+.nav__link {
+    color: $text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: darken($text-color, 20%);
+}
+
+.hero {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: darken($primary-color, 10%);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature__icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 30%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 30%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.portfolio-item__image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-item__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+.portfolio-item:hover .portfolio-item__overlay {
+    opacity: 1;
+}
+
+.portfolio-item__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-item__description {
+    text-align: center;
+    max-width: 80%;
+}
+
+.section-contact {
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 80px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.button-primary {
+    display: inline-block;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: darken($primary-color, 10%);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+}
