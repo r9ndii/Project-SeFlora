@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YourWebsite - Home</title>
+    <title>Sleek & Modern Homepage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,43 +15,88 @@
                 </div>
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link nav__link--cta">Sign Up</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="hero">
-                <h1 class="hero__title">Connect with Your Community</h1>
-                <p class="hero__subtitle">Share moments, join groups, explore events, and more.</p>
-                <a href="#" class="button button-primary">Get Started</a>
+                <h1 class="hero__title">Discover the Power of Clean Design</h1>
+                <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
+                <a href="#services" class="button button-primary">Explore Services</a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="section section-about">
+    <section id="features" class="section section-features">
         <div class="container">
-            <h2 class="section-about__title">About Us</h2>
-            <p class="section-about__description">Learn about our mission and values.</p>
+            <h2 class="section__title">Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="icon1.svg" alt="Feature Icon" class="feature__icon">
+                    <h3 class="feature__title">Responsive Design</h3>
+                    <p class="feature__description">Optimized for all devices to ensure seamless experience.</p>
+                </div>
+                <div class="feature">
+                    <img src="icon2.svg" alt="Feature Icon" class="feature__icon">
+                    <h3 class="feature__title">Interactive Elements</h3>
+                    <p class="feature__description">Engaging user interfaces with modern interactions.</p>
+                </div>
+                <div class="feature">
+                    <img src="icon3.svg" alt="Feature Icon" class="feature__icon">
+                    <h3 class="feature__title">Fast Loading</h3>
+                    <p class="feature__description">Optimized performance to minimize load times.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="services" class="section section-services">
         <div class="container">
-            <h2 class="section-services__title">Our Services</h2>
+            <h2 class="section__title">Our Services</h2>
             <div class="services">
                 <div class="service">
-                    <h3 class="service__title">Groups</h3>
-                    <p class="service__description">Join communities that matter to you.</p>
+                    <h3 class="service__title">Web Design</h3>
+                    <p class="service__description">Crafting visually appealing and functional websites.</p>
                 </div>
                 <div class="service">
-                    <h3 class="service__title">Events</h3>
-                    <p class="service__description">Discover and attend local events.</p>
+                    <h3 class="service__title">App Development</h3>
+                    <p class="service__description">Building scalable mobile and web applications.</p>
                 </div>
                 <div class="service">
-                    <h3 class="service__title">Marketplace</h3>
-                    <p class="service__description">Buy and sell items with your community.</p>
+                    <h3 class="service__title">Digital Marketing</h3>
+                    <p class="service__description">Promoting brands and driving growth through digital channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section section-portfolio">
+        <div class="container">
+            <h2 class="section__title">Portfolio</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Portfolio Item" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay">
+                        <h3 class="portfolio-item__title">Project Name</h3>
+                        <p class="portfolio-item__description">Description of the project goes here.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Portfolio Item" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay">
+                        <h3 class="portfolio-item__title">Project Name</h3>
+                        <p class="portfolio-item__description">Description of the project goes here.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Portfolio Item" class="portfolio-item__image">
+                    <div class="portfolio-item__overlay">
+                        <h3 class="portfolio-item__title">Project Name</h3>
+                        <p class="portfolio-item__description">Description of the project goes here.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,7 +104,7 @@
 
     <section id="contact" class="section section-contact">
         <div class="container">
-            <h2 class="section-contact__title">Contact Us</h2>
+            <h2 class="section__title">Contact Us</h2>
             <form class="contact-form">
                 <div class="form-group">
                     <label for="name" class="form-label">Name:</label>
@@ -87,6 +132,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 <!-- TODO 2: Add Your previous projects' HTML into the public folder -->
