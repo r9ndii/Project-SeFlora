@@ -1,0 +1,76 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the header */
+.header {
+    background-color: #ffffff; /* White background */
+    padding: 20px 0; /* Padding on top and bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a subtle effect */
+    position: fixed; /* Fixed position to stick at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Center the container inside the header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Padding for inner content */
+}
+
+/* Style for the logo */
+.nav__logo-image {
+    max-width: 100%; /* Ensure logo fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for navigation menu */
+.nav__list {
+    list-style: none; /* Remove default list styles */
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #333333; /* Dark text color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav__link:hover {
+    color: #0078d4; /* Change color on hover */
+}
+
+/* Adjust hero section styles */
+.hero {
+    text-align: left; /* Align hero content to the left */
+    max-width: 600px; /* Limit width of hero content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0; /* Reduce padding on smaller screens */
+    }
+
+    .header .container {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .hero {
+        max-width: 100%; /* Full width for hero on smaller screens */
+    }
+}
