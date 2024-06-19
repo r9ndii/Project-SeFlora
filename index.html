@@ -5,157 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&T Landscaping</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* Additional CSS for smooth scrolling and fixed header */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav__logo {
-            margin-right: 20px;
-        }
-
-        .nav__list {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav__item {
-            margin-right: 20px;
-            position: relative; /* Needed for dropdown menu positioning */
-        }
-
-        .nav__link {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s ease;
-            display: block;
-            padding: 10px 15px;
-            position: relative;
-        }
-
-        .nav__link:hover {
-            color: #007bff;
-        }
-
-        .nav__item--dropdown:hover .nav__dropdown {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transform: translateX(0);
-        }
-
-        .nav__dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-            transform: translateY(-10px);
-            z-index: 1000;
-            width: 200px; /* Adjust as needed */
-        }
-
-        .nav__dropdown-item {
-            padding: 12px 20px;
-            color: #333;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav__dropdown-item:hover {
-            background-color: #f0f0f0;
-        }
-
-        .active {
-            color: #007bff; /* Highlight color for active link */
-        }
-
-        .hero {
-            background-image: url('assets/images/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 150px 0;
-            margin-top: 60px; /* Added margin-top to account for fixed header */
-        }
-
-        .hero__title {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero__subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 12px 24px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .button-primary {
-            background-color: #007bff;
-        }
-
-        .button-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .footer p {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -163,7 +12,7 @@
             <nav class="nav">
                 <div class="nav__logo">
                     <a href="index.html" class="nav__logo-link">
-                        <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image" style="width: 200px; height: auto;">
+                        <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image">
                     </a>
                 </div>
                 <div class="nav__menu">
@@ -204,6 +53,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

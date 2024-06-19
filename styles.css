@@ -1,4 +1,4 @@
-/* Additional CSS for smooth scrolling and fixed header */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -6,6 +6,7 @@ body {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
+/* Header Styles */
 .header {
     position: fixed;
     top: 0;
@@ -23,6 +24,15 @@ body {
 .nav {
     display: flex;
     align-items: center;
+}
+
+.nav__logo {
+    margin-right: 20px;
+}
+
+.nav__logo-image {
+    width: 200px;
+    height: auto;
 }
 
 .nav__list {
@@ -59,8 +69,8 @@ body {
 
 .nav__dropdown {
     position: absolute;
-    top: 0;
-    left: 100%;
+    top: 100%;
+    left: 0;
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -68,7 +78,7 @@ body {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    transform: translateX(-10px);
+    transform: translateY(-10px);
     z-index: 1000;
     width: 200px; /* Adjust as needed */
 }
@@ -89,6 +99,7 @@ body {
     color: #007bff; /* Highlight color for active link */
 }
 
+/* Hero Section Styles */
 .hero {
     background-image: url('assets/images/hero-bg.jpg');
     background-size: cover;
@@ -129,6 +140,7 @@ body {
     background-color: #0056b3;
 }
 
+/* Footer Styles */
 .footer {
     background-color: #333;
     color: #fff;
