@@ -50,87 +50,23 @@
             color: #007bff; /* Highlight color for active link */
         }
 
-        .section {
-            padding: 80px 0;
+        .hero {
+            background-image: url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        .hero__title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
 
-        .section__title {
-            font-size: 2.5rem;
+        .hero__subtitle {
+            font-size: 1.5rem;
             margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .section-design,
-        .section-install,
-        .section-maintain,
-        .section-contact {
-            background-color: #f9f9f9;
-        }
-
-        .section-design,
-        .section-install,
-        .section-maintain {
-            text-align: center;
-        }
-
-        .section-design .feature__icon,
-        .section-install .service__title,
-        .section-maintain .maintain-item__image {
-            max-width: 100px;
-            height: auto;
-            margin: 0 auto 20px;
-        }
-
-        .section-design .feature__title,
-        .section-install .service__title,
-        .section-maintain .maintain-item__title {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .section-design .feature__description,
-        .section-install .service__description,
-        .section-maintain .maintain-item__description {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-textarea {
-            resize: vertical;
         }
 
         .button {
@@ -179,134 +115,30 @@
                 </div>
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html#design" class="nav__link">Design</a></li>
-                        <li class="nav__item"><a href="index.html#install" class="nav__link">Install</a></li>
-                        <li class="nav__item"><a href="index.html#maintain" class="nav__link">Maintain</a></li>
-                        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="design.html" class="nav__link">Design</a></li>
+                        <li class="nav__item"><a href="install.html" class="nav__link">Install</a></li>
+                        <li class="nav__item"><a href="maintain.html" class="nav__link">Maintain</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="hero">
                 <h1 class="hero__title">Discover the Power of Clean Design</h1>
                 <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
-                <a href="index.html#install" class="button button-primary">Explore Install</a>
+                <a href="install.html" class="button button-primary">Explore Install</a>
             </div>
         </div>
     </header>
 
-    <section id="design" class="section section-design">
-        <div class="container">
-            <h2 class="section__title">Key Design</h2>
-            <div class="design">
-                <div class="feature">
-                    <img src="icon1.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">Responsive Design</h3>
-                    <p class="feature__description">Optimized for all devices to ensure seamless experience.</p>
-                </div>
-                <div class="feature">
-                    <img src="icon2.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">Interactive Elements</h3>
-                    <p class="feature__description">Engaging user interfaces with modern interactions.</p>
-                </div>
-                <div class="feature">
-                    <img src="icon3.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">Fast Loading</h3>
-                    <p class="feature__description">Optimized performance to minimize load times.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="install" class="section section-install">
-        <div class="container">
-            <h2 class="section__title">Our Install</h2>
-            <div class="install">
-                <div class="service">
-                    <h3 class="service__title">Web Design</h3>
-                    <p class="service__description">Crafting visually appealing and functional websites.</p>
-                </div>
-                <div class="service">
-                    <h3 class="service__title">App Development</h3>
-                    <p class="service__description">Building scalable mobile and web applications.</p>
-                </div>
-                <div class="service">
-                    <h3 class="service__title">Digital Marketing</h3>
-                    <p class="service__description">Promoting brands and driving growth through digital channels.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="maintain" class="section section-maintain">
-        <div class="container">
-            <h2 class="section__title">Maintain</h2>
-            <div class="maintain">
-                <div class="maintain-item">
-                    <img src="project1.jpg" alt="Maintain Item" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project Name</h3>
-                        <p class="maintain-item__description">Description of the project goes here.</p>
-                    </div>
-                </div>
-                <div class="maintain-item">
-                    <img src="project2.jpg" alt="Maintain Item" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project Name</h3>
-                        <p class="maintain-item__description">Description of the project goes here.</p>
-                    </div>
-                </div>
-                <div class="maintain-item">
-                    <img src="project3.jpg" alt="Maintain Item" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project Name</h3>
-                        <p class="maintain-item__description">Description of the project goes here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section__title">Contact Us</h2>
-            <div class="contact">
-                <form action="submit.php" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="button button-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Content sections can go here -->
+    </main>
 
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 R&T Landscaping. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Add smooth scrolling to all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
