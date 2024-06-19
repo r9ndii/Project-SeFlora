@@ -43,30 +43,38 @@
             transition: color 0.3s ease;
             display: block;
             padding: 10px 15px;
+            position: relative;
         }
 
         .nav__link:hover {
             color: #007bff;
         }
 
-        .nav__item:hover .nav__dropdown {
-            display: block;
+        .nav__item--dropdown:hover .nav__dropdown {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
         }
 
         .nav__dropdown {
-            display: none;
             position: absolute;
+            top: 100%;
+            left: 0;
             background-color: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
             z-index: 1000;
             width: 200px; /* Adjust as needed */
-            padding: 10px 0;
-            top: 100%; /* Position dropdown below the nav item */
-            left: 0;
         }
 
         .nav__dropdown-item {
-            padding: 10px 20px;
+            padding: 12px 20px;
             color: #333;
             text-decoration: none;
             display: block;
@@ -180,4 +188,5 @@
     </footer>
 </body>
 </html>
+
 
