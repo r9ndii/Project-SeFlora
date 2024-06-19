@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Another Page - R&T Landscaping</title>
+    <title>R&T Landscaping Services</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -65,92 +65,28 @@
             text-align: center;
         }
 
-        .section-design,
-        .section-install,
-        .section-maintain,
-        .section-contact {
-            background-color: #f9f9f9;
+        .service__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
         }
 
-        .section-design,
-        .section-install,
-        .section-maintain {
-            text-align: center;
-        }
-
-        .section-design .feature__icon,
-        .section-install .service__title,
-        .section-maintain .maintain-item__image {
+        .service__icon {
+            flex: 0 0 100px;
             max-width: 100px;
             height: auto;
-            margin: 0 auto 20px;
+            margin-right: 20px;
         }
 
-        .section-design .feature__title,
-        .section-install .service__title,
-        .section-maintain .maintain-item__title {
-            font-size: 1.8rem;
+        .service__title {
+            font-size: 2rem;
             margin-bottom: 10px;
         }
 
-        .section-design .feature__description,
-        .section-install .service__description,
-        .section-maintain .maintain-item__description {
+        .service__description {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 20px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-textarea {
-            resize: vertical;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 12px 24px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .button-primary {
-            background-color: #007bff;
-        }
-
-        .button-primary:hover {
-            background-color: #0056b3;
         }
 
         .footer {
@@ -179,142 +115,50 @@
                 </div>
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#design" class="nav__link">Design</a></li>
-                        <li class="nav__item"><a href="#install" class="nav__link">Install</a></li>
-                        <li class="nav__item"><a href="#maintain" class="nav__link">Maintain</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="index.html#design" class="nav__link">Design</a></li>
+                        <li class="nav__item"><a href="index.html#install" class="nav__link">Install</a></li>
+                        <li class="nav__item"><a href="index.html#maintain" class="nav__link">Maintain</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="hero">
-                <h1 class="hero__title">Discover the Power of Creative Design</h1>
-                <p class="hero__subtitle">Crafting inspiring digital experiences.</p>
-                <a href="#install" class="button button-primary">Explore More</a>
-            </div>
         </div>
     </header>
 
-    <section id="design" class="section section-design">
+    <section class="section">
         <div class="container">
-            <h2 class="section__title">Creative Design Solutions</h2>
-            <div class="design">
-                <div class="feature">
-                    <img src="icon4.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">Innovative Concepts</h3>
-                    <p class="feature__description">Pushing boundaries with fresh ideas.</p>
-                </div>
-                <div class="feature">
-                    <img src="icon5.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">User-Centered Design</h3>
-                    <p class="feature__description">Creating intuitive experiences for users.</p>
-                </div>
-                <div class="feature">
-                    <img src="icon6.svg" alt="Feature Icon" class="feature__icon">
-                    <h3 class="feature__title">Visual Storytelling</h3>
-                    <p class="feature__description">Engaging users through compelling visuals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="install" class="section section-install">
-        <div class="container">
-            <h2 class="section__title">Our Installation Services</h2>
-            <div class="install">
-                <div class="service">
-                    <h3 class="service__title">Web Development</h3>
-                    <p class="service__description">Building robust and scalable websites.</p>
-                </div>
-                <div class="service">
-                    <h3 class="service__title">Mobile Apps</h3>
-                    <p class="service__description">Creating seamless mobile experiences.</p>
-                </div>
-                <div class="service">
-                    <h3 class="service__title">SEO Optimization</h3>
-                    <p class="service__description">Enhancing visibility and traffic.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="maintain" class="section section-maintain">
-        <div class="container">
-            <h2 class="section__title">Ongoing Maintenance</h2>
-            <div class="maintain">
-                <div class="maintain-item">
-                    <img src="project4.jpg" alt="Project Image" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project XYZ</h3>
-                        <p class="maintain-item__description">Continued support and updates.</p>
+            <h2 class="section__title">Our Services</h2>
+            <div class="services">
+                <div class="service__item">
+                    <img src="icon1.svg" alt="Service Icon" class="service__icon">
+                    <div>
+                        <h3 class="service__title">Web Design</h3>
+                        <p class="service__description">Crafting visually appealing and functional websites.</p>
                     </div>
                 </div>
-                <div class="maintain-item">
-                    <img src="project5.jpg" alt="Project Image" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project ABC</h3>
-                        <p class="maintain-item__description">Ensuring functionality and security.</p>
+                <div class="service__item">
+                    <img src="icon2.svg" alt="Service Icon" class="service__icon">
+                    <div>
+                        <h3 class="service__title">App Development</h3>
+                        <p class="service__description">Building scalable mobile and web applications.</p>
                     </div>
                 </div>
-                <div class="maintain-item">
-                    <img src="project6.jpg" alt="Project Image" class="maintain-item__image">
-                    <div class="maintain-item__overlay">
-                        <h3 class="maintain-item__title">Project DEF</h3>
-                        <p class="maintain-item__description">Maintenance services tailored to your needs.</p>
+                <div class="service__item">
+                    <img src="icon3.svg" alt="Service Icon" class="service__icon">
+                    <div>
+                        <h3 class="service__title">Digital Marketing</h3>
+                        <p class="service__description">Promoting brands and driving growth through digital channels.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section section-contact">
-        <div class="container">
-            <h2 class="section__title">Get In Touch</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Your Name:</label>
-                    <input type="text" id="name" name="name" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Your Email:</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Your Message:</label>
-                    <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="button button-primary">Send Message</button>
-            </form>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 R&T Landscaping LLC. All rights reserved.</p>
+            <p>&copy; 2024 R&T Landscaping. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // JavaScript for highlighting active navigation link
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav__link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.href.endsWith(`#${current}`)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
