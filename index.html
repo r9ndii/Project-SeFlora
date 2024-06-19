@@ -34,16 +34,47 @@
 
         .nav__item {
             margin-right: 20px;
+            position: relative; /* Needed for dropdown menu positioning */
         }
 
         .nav__link {
             text-decoration: none;
             color: #333;
             transition: color 0.3s ease;
+            display: block;
+            padding: 10px 15px;
         }
 
         .nav__link:hover {
             color: #007bff;
+        }
+
+        .nav__item:hover .nav__dropdown {
+            display: block;
+        }
+
+        .nav__dropdown {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 200px; /* Adjust as needed */
+            padding: 10px 0;
+            top: 100%; /* Position dropdown below the nav item */
+            left: 0;
+        }
+
+        .nav__dropdown-item {
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav__dropdown-item:hover {
+            background-color: #f0f0f0;
         }
 
         .active {
@@ -116,7 +147,14 @@
                 <div class="nav__menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="design.html" class="nav__link">Design</a></li>
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="#" class="nav__link">Design</a>
+                            <ul class="nav__dropdown">
+                                <li><a href="design.html" class="nav__dropdown-item">Web Design</a></li>
+                                <li><a href="app-design.html" class="nav__dropdown-item">App Design</a></li>
+                                <li><a href="graphic-design.html" class="nav__dropdown-item">Graphic Design</a></li>
+                            </ul>
+                        </li>
                         <li class="nav__item"><a href="install.html" class="nav__link">Install</a></li>
                         <li class="nav__item"><a href="maintain.html" class="nav__link">Maintain</a></li>
                         <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
@@ -142,3 +180,4 @@
     </footer>
 </body>
 </html>
+
