@@ -5,6 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&T Landscaping</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Additional CSS for smooth scrolling and fixed header */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__item {
+            margin-right: 20px;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .nav__link:hover {
+            color: #007bff;
+        }
+
+        .active {
+            color: #007bff; /* Highlight color for active link */
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section__title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-design,
+        .section-install,
+        .section-maintain,
+        .section-contact {
+            background-color: #f9f9f9;
+        }
+
+        .section-design,
+        .section-install,
+        .section-maintain {
+            text-align: center;
+        }
+
+        .section-design .feature__icon,
+        .section-install .service__title,
+        .section-maintain .maintain-item__image {
+            max-width: 100px;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+
+        .section-design .feature__title,
+        .section-install .service__title,
+        .section-maintain .maintain-item__title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .section-design .feature__description,
+        .section-install .service__description,
+        .section-maintain .maintain-item__description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-textarea {
+            resize: vertical;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button-primary {
+            background-color: #007bff;
+        }
+
+        .button-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -27,14 +189,14 @@
             <div class="hero">
                 <h1 class="hero__title">Discover the Power of Clean Design</h1>
                 <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
-                <a href="#install" class="button button-primary">Explore install</a>
+                <a href="#install" class="button button-primary">Explore Install</a>
             </div>
         </div>
     </header>
 
     <section id="design" class="section section-design">
         <div class="container">
-            <h2 class="section__title">Key design</h2>
+            <h2 class="section__title">Key Design</h2>
             <div class="design">
                 <div class="feature">
                     <img src="icon1.svg" alt="Feature Icon" class="feature__icon">
@@ -57,7 +219,7 @@
 
     <section id="install" class="section section-install">
         <div class="container">
-            <h2 class="section__title">Our install</h2>
+            <h2 class="section__title">Our Install</h2>
             <div class="install">
                 <div class="service">
                     <h3 class="service__title">Web Design</h3>
@@ -77,24 +239,24 @@
 
     <section id="maintain" class="section section-maintain">
         <div class="container">
-            <h2 class="section__title">maintain</h2>
+            <h2 class="section__title">Maintain</h2>
             <div class="maintain">
                 <div class="maintain-item">
-                    <img src="project1.jpg" alt="maintain Item" class="maintain-item__image">
+                    <img src="project1.jpg" alt="Maintain Item" class="maintain-item__image">
                     <div class="maintain-item__overlay">
                         <h3 class="maintain-item__title">Project Name</h3>
                         <p class="maintain-item__description">Description of the project goes here.</p>
                     </div>
                 </div>
                 <div class="maintain-item">
-                    <img src="project2.jpg" alt="maintain Item" class="maintain-item__image">
+                    <img src="project2.jpg" alt="Maintain Item" class="maintain-item__image">
                     <div class="maintain-item__overlay">
                         <h3 class="maintain-item__title">Project Name</h3>
                         <p class="maintain-item__description">Description of the project goes here.</p>
                     </div>
                 </div>
                 <div class="maintain-item">
-                    <img src="project3.jpg" alt="maintain Item" class="maintain-item__image">
+                    <img src="project3.jpg" alt="Maintain Item" class="maintain-item__image">
                     <div class="maintain-item__overlay">
                         <h3 class="maintain-item__title">Project Name</h3>
                         <p class="maintain-item__description">Description of the project goes here.</p>
@@ -127,10 +289,33 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 R&T Landsacping LLC. All rights reserved.</p>
+            <p>&copy; 2024 R&T Landscaping LLC. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for highlighting active navigation link
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav__link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.href.endsWith(`#${current}`)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
