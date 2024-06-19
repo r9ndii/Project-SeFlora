@@ -1,76 +1,218 @@
-/* Reset default margin and padding for all elements */
-* {
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
-/* Basic styling for the header */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust padding as needed */
+}
+
 .header {
-    background-color: #ffffff; /* White background */
-    padding: 20px 0; /* Padding on top and bottom */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a subtle effect */
-    position: fixed; /* Fixed position to stick at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Stick to the top of the viewport */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure it's above other content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Center the container inside the header */
-.header .container {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Padding for inner content */
+    padding: 20px 0;
 }
 
-/* Style for the logo */
-.nav__logo-image {
-    max-width: 100%; /* Ensure logo fits within its container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Style for navigation menu */
 .nav__list {
-    list-style: none; /* Remove default list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
 .nav__item {
-    margin-right: 20px; /* Adjust spacing between menu items */
+    margin-right: 20px;
 }
 
 .nav__link {
     text-decoration: none;
-    color: #333333; /* Dark text color */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #333;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
 }
 
 .nav__link:hover {
-    color: #0078d4; /* Change color on hover */
+    color: #007bff;
 }
 
-/* Adjust hero section styles */
+.active {
+    color: #007bff; /* Highlight color for active link */
+}
+
 .hero {
-    text-align: left; /* Align hero content to the left */
-    max-width: 600px; /* Limit width of hero content */
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    margin-top: 80px; /* Ensure hero section is visible below fixed header */
 }
 
-/* Responsive adjustments */
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: #007bff;
+}
+
+.button-primary:hover {
+    background-color: #0056b3;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.section-design,
+.section-install,
+.section-maintain,
+.section-contact {
+    background-color: #fff;
+}
+
+.section-design .feature__icon,
+.section-install .service__title,
+.section-maintain .maintain-item__image {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.section-design .feature__title,
+.section-install .service__title,
+.section-maintain .maintain-item__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-design .feature__description,
+.section-install .service__description,
+.section-maintain .maintain-item__description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .header {
-        padding: 15px 0; /* Reduce padding on smaller screens */
+    .container {
+        width: 90%;
     }
 
-    .header .container {
-        padding: 0 10px; /* Adjust padding for smaller screens */
+    .nav {
+        padding: 10px 0;
     }
 
-    .hero {
-        max-width: 100%; /* Full width for hero on smaller screens */
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section__title {
+        font-size: 2rem;
     }
 }
+
