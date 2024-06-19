@@ -179,17 +179,17 @@
                 </div>
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#design" class="nav__link">Design</a></li>
-                        <li class="nav__item"><a href="#install" class="nav__link">Install</a></li>
-                        <li class="nav__item"><a href="#maintain" class="nav__link">Maintain</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="index.html#design" class="nav__link">Design</a></li>
+                        <li class="nav__item"><a href="index.html#install" class="nav__link">Install</a></li>
+                        <li class="nav__item"><a href="index.html#maintain" class="nav__link">Maintain</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="hero">
                 <h1 class="hero__title">Discover the Power of Clean Design</h1>
                 <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
-                <a href="#install" class="button button-primary">Explore Install</a>
+                <a href="index.html#install" class="button button-primary">Explore Install</a>
             </div>
         </div>
     </header>
@@ -266,56 +266,47 @@
         </div>
     </section>
 
-    <section id="contact" class="section section-contact">
+    <section id="contact" class="section">
         <div class="container">
             <h2 class="section__title">Contact Us</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name" class="form-label">Name:</label>
-                    <input type="text" id="name" name="name" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Email:</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                    <label for="message" class="form-label">Message:</label>
-                    <textarea id="message" name="message" class="form-textarea" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="button button-primary">Send Message</button>
-            </form>
+            <div class="contact">
+                <form action="submit.php" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="button button-primary">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 R&T Landscaping LLC. All rights reserved.</p>
+            <p>&copy; 2024 R&T Landscaping. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript for highlighting active navigation link
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav__link');
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.href.endsWith(`#${current}`)) {
-                    link.classList.add('active');
-                }
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
 </body>
 </html>
-
