@@ -19,6 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    transition: all 0.3s ease;
 }
 
 .nav {
@@ -31,7 +32,7 @@ body {
 }
 
 .nav__logo-image {
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 
@@ -44,7 +45,7 @@ body {
 
 .nav__item {
     margin-right: 20px;
-    position: relative; /* Needed for dropdown menu positioning */
+    position: absolute; /* Needed for dropdown menu positioning */
 }
 
 .nav__link {
@@ -53,7 +54,7 @@ body {
     transition: color 0.3s ease;
     display: block;
     padding: 10px 15px;
-    position: relative;
+    position: absolute;
 }
 
 .nav__link:hover {
@@ -64,7 +65,7 @@ body {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .nav__dropdown {
@@ -99,14 +100,91 @@ body {
     color: #007bff; /* Highlight color for active link */
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav__logo-image {
+        width: 120px;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav__list--open {
+        display: flex;
+    }
+
+    .nav__item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav__link {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav__item--dropdown:hover .nav__dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .nav__dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .nav__dropdown-item {
+        padding: 10px 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 2.0rem;
+        background: none;
+        border: none;
+        color: #333;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
 /* Hero Section Styles */
 .hero {
-    background-image: url('assets/images/hero-bg.jpg');
+    background-image: url('assets/images/website\ wallpaper.jpeg');
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 150px 0;
+    padding: 15px 0;
     margin-top: 60px; /* Added margin-top to account for fixed header */
 }
 
@@ -136,6 +214,7 @@ body {
     background-color: #007bff;
 }
 
+
 .button-primary:hover {
     background-color: #0056b3;
 }
@@ -154,5 +233,16 @@ body {
 .footer p {
     margin: 0;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* ... existing styles ... */
+
+    .nav__dropdown--open {
+        display: block;
+    }
+}
+
+
 
 

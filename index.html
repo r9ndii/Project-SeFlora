@@ -3,56 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&T Landscaping</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="nav__logo">
-                    <a href="index.html" class="nav__logo-link">
-                        <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image">
-                    </a>
-                </div>
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item nav__item--dropdown">
-                            <a href="#" class="nav__link">Design</a>
-                            <ul class="nav__dropdown">
-                                <li><a href="design.html" class="nav__dropdown-item">Web Design</a></li>
-                                <li><a href="app-design.html" class="nav__dropdown-item">App Design</a></li>
-                                <li><a href="graphic-design.html" class="nav__dropdown-item">Graphic Design</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav__item"><a href="install.html" class="nav__link">Install</a></li>
-                        <li class="nav__item"><a href="maintain.html" class="nav__link">Maintain</a></li>
-                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="nav">
+            <div class="nav__logo">
+                <img src="assets/images/R&T LOGO B&Wv3.png" alt="Logo" class="nav__logo-image">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Design</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item nav__item--dropdown">
+                    <a href="#" class="nav__link">Services</a>
+                    <div class="nav__dropdown">
+                        <a href="#" class="nav__dropdown-item">Web Design</a>
+                        <a href="#" class="nav__dropdown-item">SEO</a>
+                        <a href="#" class="nav__dropdown-item">Marketing</a>
+                    </div>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
         </div>
     </header>
-
-    <div class="hero">
-        <h1 class="hero__title">Discover the Power of Clean Design</h1>
-        <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
-        <a href="install.html" class="button button-primary">Explore Install</a>
-    </div>
-
-    <main>
-        <!-- Content sections can go here -->
-    </main>
-
+    <section class="hero">
+        <h1 class="hero__title">Welcome to Our Website</h1>
+        <p class="hero__subtitle">We provide the best services</p>
+        <a href="#" class="button button-primary">Get Started</a>
+    </section>
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 R&T Landscaping. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 R&T Landscaping Services LLC</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav__list').classList.toggle('nav__list--open');
+        });
+    </script>
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
 
