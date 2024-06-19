@@ -109,13 +109,13 @@ body {
     margin-bottom: 30px;
 }
 
-.features {
+.designs {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.feature {
+.design {
     width: 30%;
     padding: 20px;
     margin-bottom: 20px;
@@ -126,19 +126,19 @@ body {
     text-align: center;
 }
 
-.feature__icon {
+.design__icon {
     width: 50px;
     height: 50px;
     margin-bottom: 20px;
 }
 
-.services {
+.installs {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.service {
+.install {
     width: 30%;
     padding: 20px;
     margin-bottom: 20px;
@@ -149,25 +149,25 @@ body {
     text-align: center;
 }
 
-.portfolio {
+.maintain {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.portfolio-item {
+.maintain-item {
     position: relative;
     width: 30%;
     margin-bottom: 30px;
     cursor: pointer;
 }
 
-.portfolio-item__image {
+.maintain-item__image {
     width: 100%;
     border-radius: 5px;
 }
 
-.portfolio-item__overlay {
+.maintain-item__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -184,16 +184,16 @@ body {
     border-radius: 5px;
 }
 
-.portfolio-item:hover .portfolio-item__overlay {
+.maintain-item:hover .maintain-item__overlay {
     opacity: 1;
 }
 
-.portfolio-item__title {
+.maintain-item__title {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.portfolio-item__description {
+.maintain-item__description {
     text-align: center;
     max-width: 80%;
 }
