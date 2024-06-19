@@ -34,6 +34,10 @@
             align-items: center;
         }
 
+        .nav__logo {
+            margin-right: 20px;
+        }
+
         .nav__list {
             display: flex;
             list-style-type: none;
@@ -68,8 +72,8 @@
 
         .nav__dropdown {
             position: absolute;
-            top: 0;
-            left: 100%;
+            top: 100%;
+            left: 0;
             background-color: #fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
@@ -77,7 +81,7 @@
             visibility: hidden;
             pointer-events: none;
             transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-            transform: translateX(-10px);
+            transform: translateY(-10px);
             z-index: 1000;
             width: 200px; /* Adjust as needed */
         }
@@ -158,13 +162,12 @@
         <div class="container">
             <nav class="nav">
                 <div class="nav__logo">
-                    <a href="#" class="nav__logo-link">
+                    <a href="index.html" class="nav__logo-link">
                         <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image" style="width: 200px; height: auto;">
                     </a>
                 </div>
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
                         <li class="nav__item nav__item--dropdown">
                             <a href="#" class="nav__link">Design</a>
                             <ul class="nav__dropdown">
@@ -201,5 +204,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
