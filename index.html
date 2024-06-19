@@ -7,19 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        :root {
-            --primary-color: #007bff;
-            --secondary-color: #333;
-            --light-color: #fff;
-            --dark-color: #000;
-            --transition-speed: 0.3s;
-        }
-
+        /* Additional CSS for smooth scrolling and fixed header */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
         }
 
         .header {
@@ -27,27 +20,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: var(--light-color);
+            background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
-
-        .nav__logo img {
-            width: 200px;
-            height: auto;
         }
 
         .nav__list {
@@ -59,19 +34,20 @@
 
         .nav__item {
             margin-right: 20px;
-            position: relative;
+            position: relative; /* Needed for dropdown menu positioning */
         }
 
         .nav__link {
             text-decoration: none;
-            color: var(--secondary-color);
-            transition: color var(--transition-speed);
-            padding: 10px 15px;
+            color: #333;
+            transition: color 0.3s ease;
             display: block;
+            padding: 10px 15px;
+            position: relative;
         }
 
         .nav__link:hover {
-            color: var(--primary-color);
+            color: #007bff;
         }
 
         .nav__item--dropdown:hover .nav__dropdown {
@@ -85,24 +61,24 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: var(--light-color);
+            background-color: #fff;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
-            transition: opacity var(--transition-speed), visibility var(--transition-speed), transform var(--transition-speed);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
             transform: translateY(-10px);
             z-index: 1000;
-            width: 200px;
+            width: 200px; /* Adjust as needed */
         }
 
         .nav__dropdown-item {
             padding: 12px 20px;
-            color: var(--secondary-color);
+            color: #333;
             text-decoration: none;
             display: block;
-            transition: background-color var(--transition-speed);
+            transition: background-color 0.3s ease;
         }
 
         .nav__dropdown-item:hover {
@@ -110,14 +86,14 @@
         }
 
         .active {
-            color: var(--primary-color);
+            color: #007bff; /* Highlight color for active link */
         }
 
         .hero {
             background-image: url('assets/images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
-            color: var(--light-color);
+            color: #fff;
             text-align: center;
             padding: 150px 0;
         }
@@ -134,24 +110,27 @@
 
         .button {
             display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--light-color);
+            background-color: #007bff;
+            color: #fff;
             padding: 12px 24px;
             font-size: 1rem;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color var(--transition-speed);
         }
 
-        .button:hover {
+        .button-primary {
+            background-color: #007bff;
+        }
+
+        .button-primary:hover {
             background-color: #0056b3;
         }
 
         .footer {
-            background-color: var(--secondary-color);
-            color: var(--light-color);
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -170,7 +149,7 @@
             <nav class="nav">
                 <div class="nav__logo">
                     <a href="#" class="nav__logo-link">
-                        <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image">
+                        <img src="assets/images/R&T LOGO B&Wv3.png" alt="R&T Landscaping Logo" class="nav__logo-image" style="width: 200px; height: auto;">
                     </a>
                 </div>
                 <div class="nav__menu">
@@ -193,7 +172,7 @@
             <div class="hero">
                 <h1 class="hero__title">Discover the Power of Clean Design</h1>
                 <p class="hero__subtitle">Crafting digital experiences that resonate.</p>
-                <a href="install.html" class="button">Explore Install</a>
+                <a href="install.html" class="button button-primary">Explore Install</a>
             </div>
         </div>
     </header>
@@ -207,8 +186,10 @@
             <p>&copy; 2024 R&T Landscaping. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
