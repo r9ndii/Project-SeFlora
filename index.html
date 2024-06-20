@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>R&J Landscaping Services</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header class="header">
         <div class="nav">
             <div class="nav__logo">
-                <img src="assets/images/R&T LOGO B&Wv3.png" alt="Logo" class="nav__logo-image">
+                <a href="index.html">
+                    <img src="assets/images/R&T LOGO B&Wv3.png" alt="Logo" class="nav__logo-image">
+                </a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Design</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Install</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
                 <li class="nav__item nav__item--dropdown">
                     <a href="#" class="nav__link">Services</a>
                     <div class="nav__dropdown">
@@ -24,17 +27,18 @@
                         <a href="#" class="nav__dropdown-item">Marketing</a>
                     </div>
                 </li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
             </ul>
         </div>
     </header>
+    
     <section class="hero">
         <h1 class="hero__title">Welcome to Our Website</h1>
         <p class="hero__subtitle">We provide the best services</p>
         <a href="#" class="button button-primary">Get Started</a>
     </section>
+    
     <footer class="footer">
-        <p>&copy; 2024 R&T Landscaping Services LLC</p>
+        <p>&copy; 2024 R&J Landscaping Services LLC</p>
     </footer>
 
     <script>
@@ -42,9 +46,10 @@
             document.querySelector('.nav__list').classList.toggle('nav__list--open');
         });
     </script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
