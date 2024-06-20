@@ -29,6 +29,7 @@ body {
 
 .nav__logo {
     margin-right: 20px;
+
 }
 
 .nav__logo-image {
@@ -45,7 +46,7 @@ body {
 
 .nav__item {
     margin-right: 20px;
-    position: absolute; /* Needed for dropdown menu positioning */
+    position: relative; /* Needed for dropdown menu positioning */
 }
 
 .nav__link {
@@ -54,7 +55,7 @@ body {
     transition: color 0.3s ease;
     display: block;
     padding: 10px 15px;
-    position: absolute;
+    position: relative;
 }
 
 .nav__link:hover {
@@ -90,6 +91,7 @@ body {
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
+    
 }
 
 .nav__dropdown-item:hover {
@@ -224,8 +226,8 @@ body {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
+    padding: 10px 0;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -241,6 +243,7 @@ body {
     .nav__dropdown--open {
         display: block;
     }
+    
 }
 
 
