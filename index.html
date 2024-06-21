@@ -8,12 +8,12 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="assets/images/R&T LOGO B&Wv3.png" alt="Logo" class="header__logo-image">
+            </a>
+        </div>
         <div class="nav">
-            <div class="nav__logo">
-                <a href="index.html">
-                    <img src="assets/images/R&T LOGO B&Wv3.png" alt="Logo" class="nav__logo-image">
-                </a>
-            </div>
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Design</a></li>
@@ -41,12 +41,7 @@
         <p>&copy; 2024 R&J Landscaping Services LLC</p>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.nav__list').classList.toggle('nav__list--open');
-        });
-    </script>
-    <script src="script.js"></script>
+   <script src="nav.js"></script>
 </body>
 </html>
 
