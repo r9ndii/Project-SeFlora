@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&J Landscaping Services</title>
+    <title>R&J Landscaping TEAM</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
@@ -23,18 +23,27 @@
                     <a href="#" class="nav__link">Company</a>
                     <div class="nav__dropdown">
                         <a href="#" class="nav__dropdown-item">About</a>
-                        <a href="team.html" class="nav__dropdown-item" id="our-team-link">Our Team</a> <!-- Link updated to point to team.html -->
+                        <a href="index.html" class="nav__dropdown-item" id="our-team-link">Our Team</a> <!-- Link updated to point to team.html -->
                         <a href="#" class="nav__dropdown-item">Blog</a>
                     </div>
                 </li>
             </ul>
         </div>
     </header>
+
     
-    <section class="hero">
-        <h1 class="hero__title">Welcome to Our Website</h1>
-        <p class="hero__subtitle">We provide the best services</p>
-        <a href="#" class="button button-primary">Get Started</a>
+    <!-- Add team-specific content here -->
+    <section class="team">
+        <h1 class="team__title">Meet Our Team</h1>
+        <div class="avatars">
+            <img class="avatar" src="assets/images/Our Team Selfies/dodger.jpeg">
+            <img class="avatar" src="assets/images/Our Team Selfies/Gordon.jpeg">
+            <img class="avatar" src="assets/images/Our Team Selfies/ramsey.JPG">
+            <img class="avatar" src="assets/images/Our Team Selfies/randy.jpeg">
+            <img class="avatar" src="assets/images/Our Team Selfies/pabloescobar.jpeg">
+        </div>
+
+        
     </section>
     
     <footer class="footer">
@@ -43,11 +52,18 @@
    
     <script src="nav.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ourTeamLink = document.getElementById('our-team-link');
+            if (ourTeamLink) {
+                ourTeamLink.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default action
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
-
-
-
-
 
 
