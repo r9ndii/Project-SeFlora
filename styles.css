@@ -1,57 +1,103 @@
 /* Global Styles */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.34;
     margin: 0;
     scroll-behavior: smooth; /* Enable smooth scrolling */
+    
+}
+
+.banner {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 1100;
+}
+
+.link {
+    text-decoration: none;
+    color: #e3dcdc;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 15px;
+    position: fixed;
+    height: 1.1rem;
+    z-index: 9999;
+    justify-content: flex-start;
+}
+
+
+@media (max-width: 100px) {
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0px; 
+    }
+
 }
 
 /* Header Styles */
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 10%;
+    height: 120px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0px 0px;
     transition: all 0.3s ease;
 }
 
+
 .header__logo {
     margin-right: 20px;
-    height: 124px;
+    height: 109px;
+
 }
 
 .header__logo-image {
-    width: 200px;
+    width: 220px;
     height: auto;
+   
 }
 
 .nav {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
     right: 845px;
+    padding: 20px 200px;
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
    
 }
 
 .nav__list {
     display: flex;
     list-style-type: none;
-    margin: 0;
+    margin: 37px;
     padding: 0;
+    height: 0;
 
+  
 }
 
+
 .nav__item {
-    margin-right: 15px;
+    margin-right: 1px;
     position: relative; /* Needed for dropdown menu positioning */
+    
 }
 
 .nav__link {
@@ -65,8 +111,25 @@ body {
     
 }
 
-.nav__link:hover {
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform scale 500ms ease-in;
+   
+}
+
+
+.nav__link:hover::after {
     color: #007bff;
+    transform: scaleX(1);
 }
 
 .nav__item--dropdown:hover .nav__dropdown {
@@ -74,11 +137,12 @@ body {
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
+    position: relative;
 }
 
 .nav__dropdown {
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -88,25 +152,34 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
     transform: translateY(-10px);
-    z-index: 1000;
-    width: 200px; /* Adjust as needed */
+    z-index: 999;
+    width: 100%; /* Adjust as needed */
+  
 }
-
 .nav__dropdown-item {
     padding: 12px 20px;
     color: #333;
     text-decoration: none;
-    display: block;
+    display: flex;
     transition: background-color 0.3s ease;
     
 }
 
 .nav__dropdown-item:hover {
     background-color: #f0f0f0;
+   
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav__dropdown--open {
+        display: block;
+    }
 }
 
 .active {
-    color: #007bff; /* Highlight color for active link */
+    color: #7a9abd; /* Highlight color for active link */
 }
 
 /* Responsive Styles */
@@ -114,13 +187,14 @@ body {
     .header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px;
-        background: steelblue;
-        inset: 0 0 0 3;
+        padding: 10px 0; 
+
     }
 
     .header__logo-image {
         width: 120px;
+        padding: 45px 0px;
+               
     }
 
     .nav__list {
@@ -177,14 +251,15 @@ body {
         border: none;
         color: #333;
         position: fixed;
-        top: 1rem;
-        right: 2rem;
+        top: 3.9rem;
+        right: 0rem;
     }
 }
 
 @media (min-width: 769px) {
     .menu-toggle {
         display: none;
+        position: fixed;
     }
 }
 
@@ -193,10 +268,11 @@ body {
     background-image: url('assets/images/website wallpaper.jpeg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #f8f8f8;
     text-align: center;
     padding: 15px 0;
-    margin-top: 60px; /* Added margin-top to account for fixed header */
+    margin-top: 0px; /* Added margin-top to account for fixed header */
+    
 }
 
 .hero__title {
@@ -229,18 +305,35 @@ body {
     background-color: #0056b3;
 }
 
+.content{
+    text-align: center;
+}
+
+.avatars-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    padding: 20px; /* Optional: Add padding to avoid edge clipping */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+
 .avatars {
-    --avatar-count: 10;
+    --avatar-count: 5;
     --avatar-size: 70px;
 
     /* Don't Change This */
     --column-size: calc(var(--avatar-size) / 2);
 
     display: grid;
-    grid-template-columns: repeat(10, var(--column-size));
+    grid-template-columns: repeat(5, var(--column-size));
+    gap: 10px;
 
     transition: grid-template-columns 500ms;
     transition-delay: 500ms;
+
     
 }
 
@@ -273,6 +366,24 @@ body {
     
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .avatars {
+        --avatar-size: 50px; /* Adjust size for smaller screens */
+    }
+}
+
+.team {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 60px;
+}
+
+.team__title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
 /* Footer Styles */
 .footer {
     background-color: #333;
@@ -286,15 +397,8 @@ body {
 
 .footer p {
     margin: 0;
+    
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav__dropdown--open {
-        display: block;
-    }
-}
-
 
 
 

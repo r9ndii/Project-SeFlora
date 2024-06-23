@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&J Landscaping TEAM</title>
+    <title>Our Team - R&J Landscaping Services</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+    <div class="banner"></div>
     <header class="header">
         <div class="header__logo">
             <a href="index.html">
@@ -18,7 +19,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Design</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Install</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Maintain</a></li>
                 <li class="nav__item nav__item--dropdown">
                     <a href="#" class="nav__link">Company</a>
                     <div class="nav__dropdown">
@@ -35,6 +36,7 @@
     <!-- Add team-specific content here -->
     <section class="team">
         <h1 class="team__title">Meet Our Team</h1>
+        <div class="avatars-wrapper">
         <div class="avatars">
             <img class="avatar" src="assets/images/Our Team Selfies/dodger.jpeg">
             <img class="avatar" src="assets/images/Our Team Selfies/Gordon.jpeg">
@@ -62,6 +64,32 @@
             }
         });
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function centerAvatars() {
+            const avatarsWrapper = document.querySelector('.avatars-wrapper');
+            const avatars = document.querySelector('.avatars');
+            const windowHeight = window.innerHeight;
+            const avatarsHeight = avatars.offsetHeight;
+
+            avatarsWrapper.style.minHeight = `${windowHeight}px`;
+            avatarsWrapper.style.display = 'flex';
+            avatarsWrapper.style.justifyContent = 'center';
+            avatarsWrapper.style.alignItems = 'center';
+        }
+
+        function handleTransitionEnd() {
+            centerAvatars();
+        }
+
+        window.addEventListener('resize', centerAvatars);
+        document.querySelector('.avatars').addEventListener('transitionend', handleTransitionEnd);
+
+        centerAvatars();
+    });
+</script>
+
 
 </body>
 </html>
